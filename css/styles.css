@@ -139,7 +139,8 @@ img {
 
   /* компенсация падинга навигации футер */
   padding-top: 28px;
-  padding-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 4px solid #2196f300;
 }
 
 .header-nav {
@@ -157,6 +158,8 @@ img {
 .header-nav-site a:hover,
 .header-nav-site a:focus {
   color: var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: 2px;
 }
 
 .link.current {

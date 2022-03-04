@@ -139,12 +139,12 @@ img {
 
   /* компенсация падинга навигации футер */
   padding-top: 28px;
-  padding-bottom: 24px;
-  border-bottom: 4px solid #2196f300;
+  padding-bottom: 28px;
 }
 
 .header-nav {
   margin-right: 50px;
+  position: relative;
 }
 
 .header-nav-site {
@@ -158,10 +158,34 @@ img {
 .header-nav-site a:hover,
 .header-nav-site a:focus {
   color: var(--accent-color);
-  border-bottom: 4px solid var(--accent-color);
-  border-radius: 2px;
 }
 
+/* полоска в хедере */
+.effect {
+  position: relative;
+}
+
+.effect::after {
+  content: "";
+  width: 0px;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  /* переход */
+  transition-property: width, left;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s, 0s;
+  right: 0;
+}
+
+.effect:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* текущаяя страница в хедере цвет */
 .link.current {
   color: var(--accent-color);
 }

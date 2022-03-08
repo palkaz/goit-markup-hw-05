@@ -180,7 +180,6 @@ img {
 
 .effect:hover::after {
   transform: scaleX(1);
-  
 }
 /* текущаяя страница в хедере цвет */
 .link.current {
@@ -605,3 +604,55 @@ img {
 .portfolio-exemple:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+/* test overlay */
+.portfolio-box {
+  position: relative;
+}
+
+.portfolio-box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  background: #21b2f8;
+}
+
+.portfolio-tumb:hover .portfolio-box::before {
+  transform: translateY(0);
+}
+
+/* .portfolio-box:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #21b2f8;
+  z-index: 2;
+} */
+
+/* контейнер для текста */
+/* .portfolio-overline::before {
+  content: "dhdhdhdh";
+  position: absolute;
+  display: block;
+  block-size: inherit;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #1f555cc2;
+  z-index: 1;
+}
+
+.portfolio-overline:hover:before {
+  content: "dhdhdhdh";
+  position: absolute;
+  display: block;
+  block-size: inherit;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #1f555cc2;
+  z-index: 1;
+} */

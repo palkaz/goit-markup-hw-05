@@ -654,3 +654,32 @@ p.cards-overlay {
   /* test */
   /* border: 1px solid #f44336; */
 }
+
+/* модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.data-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 400px;
+  min-width: 600px;
+  padding: 15px;
+
+  background-color: #fff;
+  color: #212121;
+}

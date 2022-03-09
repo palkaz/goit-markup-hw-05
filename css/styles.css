@@ -2,6 +2,7 @@
 :root {
   --accent-color: #2196f3;
   --accent-color-hover: #188ce8;
+  --color-background-overlay: rgba(33, 150, 243, 0.9);
   --title-color: #212121;
   --hero-overlay: rgba(47, 48, 58, 0.4);
   --txt-color: #757575;
@@ -590,6 +591,7 @@ img {
   margin-bottom: 30px;
 }
 
+/* тень на карточке */
 .portfolio-shadows:hover,
 .portfolio-shadows:focus {
   display: block;
@@ -617,23 +619,18 @@ img {
   width: 100%;
   height: 100%;
   transform: translateY(101%);
-  background: rgba(33, 150, 243, 0.9);
+  background: var(--color-background-overlay);
   /* анимация */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* анимация при ховере */
 .portfolio-exemple:hover .portfolio-box::before,
 .portfolio-exemple:hover .portfolio-box-text {
   transform: translateY(0%);
 }
 
-/* transform: translateY(101%); */
-/* background: #f11616;
-  анимация
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 /* контейнер для текста на карточке */
-
 .portfolio-box-text {
   content: "";
   position: absolute;
@@ -642,10 +639,18 @@ img {
   top: 0%;
   left: 0%;
   transform: translateY(101%);
-  color: #fff;
+  color: var(--header-hero-color);
   /* анимация */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cards-overlay {
-  width: 370px;
+
+/* позиционирование текста */
+p.cards-overlay {
+  width: 322px;
+  height: 168px;
+  margin-top: 63px;
+  margin-left: 24px;
+  font-size: 18px;
+  /* test */
+  /* border: 1px solid #f44336; */
 }

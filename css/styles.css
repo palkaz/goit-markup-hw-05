@@ -678,8 +678,8 @@ p.cards-overlay {
   transform: translate(-50%, -50%);
 
   min-height: 528px;
-min-width: 571px;
-padding: 15px;
+  min-width: 571px;
+  padding: 15px;
   
 
   /* min-height: 528px;

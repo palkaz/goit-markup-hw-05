@@ -15,6 +15,10 @@
   --footer-contact: rgba(255, 255, 255, 0.6);
   --footer-bg-icon: rgba(255, 255, 255, 0.1);
   --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow-btn: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-cards: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 body {
@@ -406,7 +410,6 @@ img {
 /* форматирование для футера */
 .footer .items-link {
   background-color: var(--footer-bg-icon);
-  /* fill: var(--icon-items-color); */
   /* переход */
   transition: color var(--animation), background-color var(--animation);
 }
@@ -550,7 +553,8 @@ img {
   padding-bottom: 6px;
   padding-left: 22px;
   /* переход */
-  transition: color var(--animation), background var(--animation);
+  transition: color var(--animation), background var(--animation),
+    box-shadow var(--animation);
 }
 
 .portfolio-benefits {
@@ -584,8 +588,7 @@ img {
   background: var(--accent-color);
   color: var(--header-hero-color);
   /* shadow-middle */
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--box-shadow-btn);
   border-radius: 4px;
 }
 
@@ -613,8 +616,9 @@ img {
 .portfolio-shadows:hover,
 .portfolio-shadows:focus {
   display: block;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--box-shadow-cards);
+  /* переход */
+  transition: box-shadow var(--animation);
 }
 
 .portfolio-exemple:nth-child(3n) {
